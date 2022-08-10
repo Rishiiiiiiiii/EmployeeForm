@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Employee Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+     </head>
+    
+    <body>
+        <div class='container'>
+            <div class='page-header text-center'>
+                <h2>Employee Form With Navigation Buttons</h2>
+            </div>
+            <form id='empform' method="get">
+                <div class='form-group'>
+                    <label>Employee ID :</label>
+                    <input type='text' id='empid' class='form-control' onchange="getEmp()">
+                </div>    
+                <div class='form-group'>
+                    <label>Employee Name :</label>
+                    <input type='text' id='empname' class='form-control'>
+                </div>
+                <div class='form-group'>
+                    <label>Basic Salary :</label>
+                    <input type='number' id='empsal' class='form-control'>
+                </div>
+                <div class='form-group'>
+                    <label>HRA :</label>
+                    <input type='number' id='hra' class='form-control'>
+                </div>
+                <div class='form-group'>
+                    <label>DA :</label>
+                    <input type='number' id='da' class='form-control'>
+                </div>
+                <div class='form-group'>
+                    <label>Deduction :</label>
+                    <input type='text' id='deduct' class='form-control'>
+                </div>
+                
+                <br>
+                
+                <div class="form-group text-center">
+                    <button type="button" class="btn btn-lg btn-primary" id="new" onclick="newData()" disabled>New</button>
+                    <button type="button" class="btn btn-lg btn-primary" id="save" onclick="saveData()" disabled>Save</button>
+                    <button type="button" class="btn btn-lg btn-primary" id="edit" onclick="editData()" disabled>Edit</button>
+                    <button type="button" class="btn btn-lg btn-primary" id="change" onclick="changeData()" disabled>Change</button>
+                    <button type="button" class="btn btn-lg btn-primary" id="reset" onclick="resetData()" disabled>Reset</button>
+                </div>      
+                <br>
+                <div class="form-group text-center">
+                    <button type="button" class="btn btn-lg btn-primary" id="first" onclick="getFirst()" >First</button>
+                    <button type="button" class="btn btn-lg btn-primary" id="prev" onclick="getPrev()" >Previous</button>
+                    <button type="button" class="btn btn-lg btn-primary" id="next" onclick="getNext()" disabled>Next</button>
+                    <button type="button" class="btn btn-lg btn-primary" id="last" onclick="getLast()" disabled>Last</button>
+                </div>                  
+            </form>
+        </div>
+                <script type="text/javascript" src="http://login2explore.com/jpdb/resources/js/0.0.3/jpdb-commons.js"></script>
+        <script type="text/javascript" src="index.js"></script>
+    </body>
+</html>
